@@ -233,13 +233,22 @@ def main():
         print(ids)
         method = input('Please enter the sort method:\n1.Like\n2.Bookmark\n3.View\n')
         if method == '1':
-            sortedList = sorted(ids, key=getInfo.GetLike, reverse=True)
+            idd = {}
+            for id in ids:
+                idd[id] = getInfo.GetLike(id)
+            sortedList = sorted(idd, key=lambda x: x[1], reverse=True)
             print(sortedList)
         elif method == '2':
-            sortedList = sorted(ids, key=getInfo.GetBookmark, reverse=True)
+            idd = {}
+            for id in ids:
+                idd[id] = getInfo.GetBookmark(id)
+            sortedList = sorted(idd, key=lambda x: x[1], reverse=True)
             print(sortedList)
         elif method == '3':
-            sortedList = sorted(ids, key=getInfo.GetView, reverse=True)
+            idd = {}
+            for id in ids:
+                idd[id] = getInfo.GetView(id)
+            sortedList = sorted(idd, key=lambda x: x[1], reverse=True)
             print(sortedList)
         else:
             print('\033[91m Invalid input!!!!! \033[0m')

@@ -1,4 +1,5 @@
 import urllib.request, urllib.error
+import time
 import re
 import config
 
@@ -30,12 +31,26 @@ def GetLike(id):
         likeCount = re.findall(findLike,html)[0]
         return int(likeCount)
 
-    except urllib.error.URLError as e:
-        if hasattr(e, "code"):
+    except urllib.error.HTTPError as e:
+        if hasattr(e, 'headers'):
+            print(e.headers)
+        if hasattr(e, 'code'):
             print(e.code)
-        if hasattr(e, "reason"):
+        if hasattr(e, 'reason'):
             print(e.reason)
-        return 0
+        time.sleep(120)
+        response = urllib.request.urlopen(request)
+        html = response.read()
+        html = str(html)
+        likeCount = re.findall(findLike, html)[0]
+        return int(likeCount)
+
+    # except urllib.error.URLError as e:
+    #     if hasattr(e, "code"):
+    #         print(e.code)
+    #     if hasattr(e, "reason"):
+    #         print(e.reason)
+    #     return 0
 
 def GetBookmark(id):
     url = baseurl + str(id)

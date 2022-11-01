@@ -191,7 +191,7 @@ def findPIDs_by_Tag():
     # tag = input('请输入要查找的tag:')
 
     p = input('Please enter the page you need to download:')
-    url = urls + sumtag1 + urlm1 + sumtag2 + urlm2 + p +urle
+    url = urls + sumtag1 + urlm1 + sumtag2 + urlm2 + p + urle
     # print(sumtag2)
     # print(url)
     res = askUrl(url)
@@ -256,6 +256,7 @@ def findPIDs_by_Tag_sort():
                 sumtag3 = tag
                 # print(sumtag2)
                 # print(sumtag1)
+    pmax = int(input('Please enter the maximum page number:\n'))
     sumtag3 = sumtag3 + '_mode' + mode
     urls = 'https://www.pixiv.net/ajax/search/artworks/'
     urlm1 = '?word='
@@ -274,7 +275,7 @@ def findPIDs_by_Tag_sort():
 
         PIDs = PIDs + AddPIDs
 
-        if len(AddPIDs) < 60 or p > 999:
+        if len(AddPIDs) < 60 or p >= pmax:
             break
 
         p = p + 1
