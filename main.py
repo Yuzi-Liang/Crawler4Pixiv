@@ -7,10 +7,9 @@ import getInfo
 import os
 import sys
 import time
+import config
 
-basePath = r'/usr/share/nginx/od/ML/'
-# basePath = r'/usr/share/nginx/empty/'
-
+basePath = config.savePath
 
 def main():
     baseurl = 'https://www.pixiv.net/artworks/'

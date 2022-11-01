@@ -1,11 +1,11 @@
 import findPID
 import time
 import os
-import urllib.request,urllib.error
+import urllib.request, urllib.error
 import re
+import config
 
-
-basePath = r'/usr/share/nginx/od/ML/'
+basePath = config.savePath
 baseurl = 'https://www.pixiv.net/artworks/'
 
 findUrl = re.compile(r'"original":"(.+?)"},"tags"',re.S)
@@ -68,10 +68,6 @@ def askURL(url):
             print(e.reason)
 
     return html
-
-
-
-
 
 
 def getData(baseurl):  #获取数据并保存
@@ -152,10 +148,6 @@ def getData(baseurl):  #获取数据并保存
 
     print("Finish downloading\n")
     return r
-
-
-
-
 
 
 ids = findPID.findPIDs_by_Daily()
