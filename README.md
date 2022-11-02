@@ -1,5 +1,5 @@
 # Crawler4Pixiv
-A Pixiv Crawler (Spider) with 20 functions to collect Pixiv illustrations can be deployed on Windows or Linux OS.
+A Pixiv Crawler (Spider) with 20 methods to collect Pixiv illustrations can be deployed on Windows or Linux OS.
 
 ## Usage
 
