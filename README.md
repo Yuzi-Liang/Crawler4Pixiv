@@ -21,5 +21,7 @@ userID = ''
 cookie = ''
 ```
 
-Enter your Pixiv id, it can be found on your Pixiv homepage: 
+Enter your Pixiv id, which can be found on your Pixiv homepage: 
+
+<img src="\image\1.png" style="zoom:100%;" />
 
