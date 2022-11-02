@@ -23,4 +23,4 @@ cookie = ''
 
 Enter your Pixiv id, which can be found on your Pixiv homepage: 
 
-![image](https://github.com/Yuzi-Liang/Crawler4Pixiv/tree/main/image/1.png)
+![image](https://github.com/Yuzi-Liang/Crawler4Pixiv/blob/main/image/1.png)
