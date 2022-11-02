@@ -13,7 +13,7 @@ basePath = config.savePath
 
 def main():
     baseurl = 'https://www.pixiv.net/artworks/'
-    findMethod = input("Method：\n1.Author id\n2.Illustration id\n3.Daily rank\n4.Daily rank R18\n5.Weekly rank\n6.Weekly rank R18\n7.Monthly rank\n8.Daily male rank\n9.Daily male rank R18\n10.daily female rank\n11.Daily female rank R18\n12.Tag\n13.Followed Author in public\n14.Followed Author in private\n15.Followed Author in public without asking\n16.Followed Author in private without asking\n17.Repair by illustration id\n18.Update illustrations of followed author in public\n19.Update illustrations of followed author in private\n20.Tag & sort\n")
+    findMethod = input("Method：\n1.Author id\n2.Illustration id\n3.Daily rank\n4.Daily rank R18\n5.Weekly rank\n6.Weekly rank R18\n7.Monthly rank\n8.Daily male rank\n9.Daily male rank R18\n10.Daily female rank\n11.Daily female rank R18\n12.Tag\n13.Followed Author in public\n14.Followed Author in private\n15.Followed Author in public without asking\n16.Followed Author in private without asking\n17.Repair by illustration id\n18.Update illustrations of followed author in public\n19.Update illustrations of followed author in private\n20.Tag & sort\n")
     if findMethod == '1':
         pid = input('Please enter author id:')
         ids = findPID.findPIDs_by_Author(pid)
